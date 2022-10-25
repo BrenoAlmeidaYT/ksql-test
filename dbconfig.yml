@@ -1,0 +1,11 @@
+development:
+    dialect: postgres
+    datasource: dbname=ksqldb sslmode=disable user=postgres password=password port=8999
+    dir: migrations
+    table: migrations
+
+production:
+    dialect: postgres
+    datasource: dbname=ksqldb sslmode=disable user=postgres password=password port=8999
+    dir: migrations
+    table: migrations
