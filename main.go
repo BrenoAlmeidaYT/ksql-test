@@ -31,5 +31,12 @@ func main() {
 	app.Delete("/authors/:author_id", ctrl.DeleteAuthor)
 	app.Delete("/videos/:video_id", ctrl.DeleteVideo)
 
-	app.Listen(":3000")
+	app.Get("/authors/:author_id", ctrl.GetAuthor)
+
+	app.Get("/authors/phone/test/chunks", ctrl.GetAuthorWithInvalidPhonesChunks)
+	app.Get("/authors/phone/test/nochunks", ctrl.GetAuthorWithInvalidPhonesWithoutChunks)
+
+	app.Post("/authorWithVideos", ctrl.InsertAuthorWithVideos)
+
+	app.Listen(":3100")
 }

@@ -15,6 +15,7 @@ type Video struct {
 }
 
 type Author struct {
-	ID   int     `ksql:"id" json:"id"`
-	Name *string `ksql:"name" json:"name"`
+	ID    int     `ksql:"id" json:"id"`
+	Name  *string `ksql:"name" json:"name"`
+	Phone *string `ksql:"phone" json:"phone"`
 }
